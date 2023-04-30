@@ -1,0 +1,50 @@
+GET http://localhost:3000/admin/products/zapatillas HTTP/1.1
+Content-Type: application/json
+###
+
+GET http://localhost:3000/admin/productFilter/?position=1&order=asc HTTP/1.1
+Content-Type: application/json
+###
+
+POST http://localhost:3000/admin/add HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": 4,
+    "tipo": "textil",
+    "name": "vestido"
+}
+###
+
+GET http://localhost:3000/users/ HTTP/1.1
+Content-Type: application/json
+
+###
+
+
+POST http://localhost:3000/users/registrar HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "pacopepe@gorgomail.com",
+    "password": "PaYPex2"
+}
+###
+
+POST http://localhost:3000/users/eliminar HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "pacopepe@gorgomail.com",
+    "password": "PaYPex2"
+}
+
+###
+
+POST http://localhost:3000/users/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "gustavoconejo@gorgomail.com",
+    "password": "acenorias81"
+}
