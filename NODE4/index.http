@@ -1,0 +1,45 @@
+
+// Muestra todos las personas de la base de datos
+GET http://localhost:3000/persona 
+Content-Type: application/json
+###
+// Añade nueva persona en la base de datos
+POST http://localhost:3000/persona
+Content-Type: application/json
+
+{
+    "name": "Wenceslao",
+    "lastname": "García",
+    "email": "wqtdpec@gmail.com",
+    "phone": 555686868
+}
+###
+// Modifica persona enviando su _id por la url
+PUT http://localhost:3000/persona/644fea670625612c91468b72
+Content-Type: application/json
+
+{
+    "name": "Anacleto",
+    "lastname": "Gomeznarro",
+    "email": "carahuevoanacleto@gmail.com",
+    "phone": 555696969,
+    "city": "Soria"
+}
+###
+//Elimina personas mandando su _id
+DELETE http://localhost:3000/persona/645026c894a8995f9fdf14a3 
+Content-Type: application/json
+
+###
+// Filtra persona por ciudad
+GET http://localhost:3000/persona/city?citySearch=Tarragona&sort=asc
+
+###
+// Filtra nombre y los ordena por apellidos
+GET http://localhost:3000/persona/filtername?nameSearch=Wenceslao&sort=asc
+Content-Type: application/json
+###
+
+GET http://localhost:3000/persona
+Content-Type: application/json
+###

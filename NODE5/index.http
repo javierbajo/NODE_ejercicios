@@ -1,0 +1,35 @@
+
+// Muestra todos los alumnos de la base de datos
+GET http://localhost:3000/alumnos
+Content-Type: application/json
+###
+
+// Añade un alumno nuevo a la base de datos
+POST http://localhost:3000/alumnos
+Content-Type: application/json
+
+{
+    "nombre": "Tomás",
+    "apellido": "Martínez",
+    "edad": 41,
+    "aprobado": true,
+    "notas": [7, 8, 5, 6]
+}
+###
+// Modifica persona enviando su _id por la url
+PUT http://localhost:3000/alumnos/64541c643241400fbbd468000
+Content-Type: application/json
+
+{
+   "nombre": "Tomás",
+    "apellido": "Martínez",
+    "edad": 42,
+    "aprobado": true,
+    "notas": [7, 8, 5, 6]
+}
+###
+//Elimina personas mandando su _id
+DELETE http://localhost:3000/alumnos/645422f760c9a2f4394bf873
+Content-Type: application/json
+
+###
