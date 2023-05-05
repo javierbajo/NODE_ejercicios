@@ -1,10 +1,9 @@
 const mongoose = require('mongoose');
+const dotenv = require("dotenv");
+dotenv.config();
 
-const user = 'javierbajo';
-const password = 'PequeñaPelusa123';
-const db = 'clientes';
 
-const URI = `mongodb+srv://${user}:${password}@cluster0.ue3lcai.mongodb.net/${db}?retryWrites=true&w=majority`;
+const URI = process.env.URI;
 
 const connect = async () => {
     try{

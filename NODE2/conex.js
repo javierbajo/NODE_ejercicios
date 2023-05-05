@@ -1,10 +1,8 @@
 const mongoose = require('mongoose');
+require("./conex");
+require("dotenv").config();
 
-const user = "javierbajo";
-const password = "PequeñaPelusa123";
-const db = "alumnos";
-
-const uri = `mongodb+srv://${user}:${password}@cluster0.ue3lcai.mongodb.net/${db}?retryWrites=true&w=majority`;
+const uri = process.env.DB_URL;
 
 
 mongoose
