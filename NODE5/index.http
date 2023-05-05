@@ -17,7 +17,7 @@ Content-Type: application/json
 }
 ###
 // Modifica persona enviando su _id por la url
-PUT http://localhost:3000/alumnos/64541c643241400fbbd468000
+PUT http://localhost:3000/alumnos/64557ea48f3905994d42cd1d
 Content-Type: application/json
 
 {
@@ -29,7 +29,7 @@ Content-Type: application/json
 }
 ###
 //Elimina personas mandando su _id
-DELETE http://localhost:3000/alumnos/645422f760c9a2f4394bf873
+DELETE http://localhost:3000/alumnos/6455745e9abb1f426445fbe8
 Content-Type: application/json
 
 ###

@@ -30,7 +30,7 @@ const putAlumnos = async (req, res) => {
         putAlumno._id = id;
         const updatedAlumno = await Alumno.findByIdAndUpdate(id, putAlumno, {new: true});
         if(!updatedAlumno){
-            return res.status(404).json({message: "Alumno no encontrado"})
+            return res.status(404).json({message: "alumno no encontrado"})
         }
         return res.status(200).json(updatedAlumno);
     }catch(error){
@@ -42,6 +42,9 @@ const deleteAlumnos = async (req, res) => {
     try{
         const {id} = req.params;
         const deletedAlumno = await Alumno.findByIdAndDelete(id);
+        if(!deletedAlumno){
+            return res.status(404).json({message:"Alumno no encontrado"});
+        }
         return res.status(200).json(deletedAlumno);
     }catch(error){
         return res.status(500).json(error);
